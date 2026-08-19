@@ -1,6 +1,6 @@
 # Software 1 - Python Excercises
 
-**John Trehern**
+**John Trehearn**
 
 ## Module 1
 
