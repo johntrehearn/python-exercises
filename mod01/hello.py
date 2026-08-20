@@ -15,3 +15,8 @@ print("Morning")
 print ("Good\nMorning")
 print ("Good \n Morning")
 
+
+
+input("Name: ")
+
+print("OK, you entered a name")
