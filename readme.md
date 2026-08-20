@@ -2,10 +2,10 @@
 
 **John Trehearn**
 
-## Module 1
+## Module 1 & 2
 
-I have completed exercises: 
+I have completed exercises these exercises
 
-## Module 2
+## Module 3
 
-I have completed excerises: 
+I have completed excerises: 1
