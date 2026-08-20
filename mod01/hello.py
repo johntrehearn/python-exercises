@@ -5,3 +5,13 @@ print("My name is John")
 print("I'm John")
 
 print('"I\'m John"') # \ is an escape character
+
+print(10)
+print(5)
+
+print("Good")
+print("Morning")
+
+print ("Good\nMorning")
+print ("Good \n Morning")
+
