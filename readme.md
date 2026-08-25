@@ -8,4 +8,4 @@ I have completed exercises these exercises
 
 ## Module 3
 
-I have completed excerises: 1-6
+I have completed excerises all the exercise for this module.
