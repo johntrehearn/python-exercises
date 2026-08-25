@@ -2,8 +2,6 @@ talents = float(input("Enter talents: "))
 pounds = float(input("Enter pounds: "))
 lots = float(input("Enter lots: "))
 
-luoti = lots
-
 talentsToPounds = talents * 20
 talentsToLots = talentsToPounds * 32
 talentsToGrams = talentsToLots * 13.3
