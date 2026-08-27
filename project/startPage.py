@@ -17,7 +17,7 @@ else:
         if menuChoice == "1":
             print("\nWelcome to the game.\n\nThe Adventure Awaits\n")
         elif menuChoice == "2":
-            print("\n**The Termainal Castle game**\n\n -Read the text \n -Let us know what you want to do.\n")
+            print("\n**The Termainal Castle game**\n\n -Read the text. \n -Let us know what you want to do.\n")
         elif menuChoice == "3":
             print("\nLots of great in game options here.\n")
         else:
