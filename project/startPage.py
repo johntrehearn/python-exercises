@@ -23,10 +23,3 @@ else:
         else:
             if menuChoice != "lopeta":
                 print("Incorrect option selected")
-
-
-
-# Modify the game project program so that if the user enters an age under 12, the program informs them that they are a minor and shuts down. 
-# Otherwise, the program greets the user, displays the main menu, and asks for commands until the user enters "lopeta".
-
-# Add a few fictional commands that each produce a different output in the console. After a command, always display the menu again.
