@@ -1,9 +1,9 @@
-playerName = input("Please enter your name: ")
-playerAge = int(input("Please enter your age: "))
+playerName = input("\nPlease enter your name: ")
+playerAge = int(input("\nPlease enter your age: "))
 
 
 if playerAge < 12:
-    print("Sorry but you are a minor\n\nGoodbye for now\n")
+    print("\nSorry but you are a minor\n\nGoodbye for now\n")
 else:
     print(f"\nHello {playerName}, your age is {playerAge}\n")
     print("**Main Menu**\n\n1. Play the game\n2. Instructions\n3. Options")
@@ -21,9 +21,9 @@ else:
         elif menuChoice == "3":
             print("Menu 3 selected")
         else:
-            print("Incorrect option selected")
+            if menuChoice != "lopeta":
+                print("Incorrect option selected")
 
-    menuChoice = input("\nPlease choose a menu item or Enter \"lopeta\" to exit\n")
 
 
 # Modify the game project program so that if the user enters an age under 12, the program informs them that they are a minor and shuts down. 
