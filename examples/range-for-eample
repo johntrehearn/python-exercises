@@ -1,0 +1,22 @@
+names = []
+
+print ("Give five names.")
+
+for i in range(5):
+    name = input("Enter a name: ")
+    names.append(name)
+
+print(names)
+
+print(range(5)) # prints the range object
+
+for i in range(5):
+    print(i) # prints the numbers from 0 to 4
+
+# start 2 final 10
+for i in range(2, 10):
+    print(i) # prints the numbers from 2 to 9
+
+# start 2 final 10 Even number / steps of 2
+for i in range(2, 10, 2):
+    print(i) # prints the numbers from 2 to 9

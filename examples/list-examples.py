@@ -32,7 +32,7 @@ print(names)
 names.reverse() # reverses the order of the names in the list
 print(names) #The index location of the names in the list has changed after reversing the list (not stored in the original array it is the order that they are now in)
 
-len gives you the number of items in the list. The index of the last item in the list is always one less than the length of the list. For example, if a list has 5 items, the index of the last item is 4.
+#len gives you the number of items in the list. The index of the last item in the list is always one less than the length of the list. For example, if a list has 5 items, the index of the last item is 4.
 
 if len(names) > 5:
     print(names[5])  # This will not be executed because the length of names is not greater than 5 
