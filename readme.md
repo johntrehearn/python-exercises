@@ -21,3 +21,7 @@ I have completed all the exercise for this module.
 ## Module 6
 
 I have completed all the exercise for this module.
+
+## Module 7
+
+I have completed all the exercise for this module.
