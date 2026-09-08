@@ -3,7 +3,7 @@ number = input("Enter a number: ")
 numbers = []
 
 while number != "":
-    numbers.append(int(number))  # Convert the input to an integer before appending. THIS IS WHERE YOU HAVE TO DO THE CONVERSION
+    numbers.append(float(number))  # Convert the input to an integer before appending. THIS IS WHERE YOU HAVE TO DO THE CONVERSION
     number = input("Enter a number: ")
 
 print(numbers)
@@ -13,4 +13,9 @@ print(numbers)
 numbers.sort(reverse=True)  # Sorts the list in descending order
 print(numbers)
 
+print("The greatest numbers in ascending order are: ")
+
 print(numbers [:5])  
+
+for n in numbers[:5]:
+    print(n)
