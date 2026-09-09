@@ -16,9 +16,9 @@ class Car:
     def drive(self, hours):
         self.travelled_distance += hours * self.current_speed
         
-car1 = Car("ABC-123", 142)
-car1.accelerate(60)
+# car1 = Car("ABC-123", 142)
+# car1.accelerate(60)
 
-car1.drive(1.5)
+# car1.drive(1.5)
 
-print(f"Distance after driving 1.5 hours at 60 km/h: {car1.travelled_distance} km")
+# print(f"Distance after driving 1.5 hours at 60 km/h: {car1.travelled_distance} km")
