@@ -25,13 +25,12 @@ def race(cars):
             car.drive(1)
     return cars
 
-
-cars = [
-    Car("ABC-123", 180),
-    Car("BMW-345", 200),
-    Car("WVM-678", 170),
-    Car("FIA-123", 160),
-]
-race(cars)
-for car in cars:
-    print(car.license_plate, car.travelled_distance)
+# cars = [
+#     Car("ABC-123", 180),
+#     Car("BMW-345", 200),
+#     Car("WVM-678", 170),
+#     Car("FIA-123", 160),
+# ]
+# race(cars)
+# for car in cars:
+#     print(car.license_plate, car.travelled_distance)
