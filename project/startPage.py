@@ -20,7 +20,7 @@ def inventoryAdd(inventory):
 
 def carbonCalc(inventory):
     carbonEmis = len(inventory) * 551
-    print(f"\nYour inventory's production emmisions are {carbonEmis}g Carbon Dioxide ")
+    print(f"\nYour inventory's production emmisions are {carbonEmis}g Carbon Dioxide. ")
 
 def playTheGame():
     print("\n** Game Menu **\n\n1. Add item to inventory\n2. Display Inventory\n3. Check your Carbon Dioxide Emissions")
