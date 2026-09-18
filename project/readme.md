@@ -2,4 +2,4 @@
 
 John Trehearn
 
-This has been updated to include Project 3 tasks
+This has been updated to include Project 3 tasks.
