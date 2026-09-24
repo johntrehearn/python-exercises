@@ -4,31 +4,39 @@ playerAge = int(input("\nPlease enter your age: "))
 
 inventory = ["Sword", "Shield"]
 
-def inventoryAdd(inventory):
-    addItem = input("Please enter an items to add to your inventory: ")
-    inventory.append(addItem)
-    print(f"Your new inventory is {inventory}\n")
-    playTheGame()
-    return
 
 def displayInventory(inventory):
-    print(f"Your inventory currently is {inventory}\n")
+    print(f"\nYour current inventory is:\n")
+    for item in inventory:
+        print(item)
     return
 
+def inventoryAdd(inventory):
+    print()
+    addItem = input("Please enter an items to add to your inventory: ")
+    inventory.append(addItem)
+    displayInventory(inventory)
+    return
+
+def carbonCalc(inventory):
+    carbonEmis = len(inventory) * 551
+    print(f"\nYour inventory's production emmisions are {carbonEmis}g Carbon Dioxide. ")
+
 def playTheGame():
-    print("**Game Menu**\n\n1. Add item to inventory\n2. Display Inventory\n3. Check your Carbon Dioxide Emissions")
-    gameMenuChoice = input("\nPlease choose a menu item or Enter \"back\" to exit this menu:\n")
+    print("\n** Game Menu **\n\n1. Add item to inventory\n2. Display Inventory\n3. Check your Carbon Dioxide Emissions")
+    print()
+    gameMenuChoice = input("Please choose a menu item or Enter \"back\" to exit this menu: ")
     while gameMenuChoice != "back":
         if gameMenuChoice == "1":
             inventoryAdd(inventory)
         elif gameMenuChoice == "2":
-            gameMenuChoice == " "
             displayInventory(inventory)
         elif gameMenuChoice == "3":
-            options()
+            carbonCalc(inventory)
         else:
             if gameMenuChoice != "lopeta":
                 print("Incorrect option selected")
+        gameMenuChoice = input("\nPlease choose another menu item or enter \"back\" to exit: ")
     return
 
 def instructions():
@@ -50,8 +58,8 @@ else:
 
     while menuChoice != "lopeta":
 
-        print("**Main Menu**\n\n1. Play the game\n2. Instructions\n3. Options")
-        menuChoice = input("\nPlease choose a menu item or Enter \"lopeta\" to exit:\n")
+        print("** Main Menu **\n\n1. Play the game\n2. Instructions\n3. Options")
+        menuChoice = input("\nPlease choose a menu item or Enter \"lopeta\" to exit: ")
 
         if menuChoice == "1":
             playTheGame()
