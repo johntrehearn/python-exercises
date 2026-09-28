@@ -33,3 +33,12 @@ I have completed all the exercises for this module.
 ## Module 9
 
 I have completed all the exercises for this module.
+
+## Module 10
+
+I have completed all the exercises for this module.
+
+## Module 11
+
+I have completed all the exercises for this module.
+
