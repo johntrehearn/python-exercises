@@ -4,7 +4,7 @@ John Trehearn
 
 This has been updated to include Project 5 tasks.
 
-# Please run game.py
+### Please run game.py
 
 This is an adventure and discovery game based in a castle.
 
