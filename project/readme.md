@@ -15,3 +15,5 @@ The game is structured as follows:
 - Intro is sourced from `intro.txt`
 - Instructions are pulled from `instructions.txt`
 - Menu items are contained in `menu.py`
+
+The game can be saved and loaded from the game menu. The save information is stored in `save.json`.
