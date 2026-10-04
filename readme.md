@@ -42,3 +42,11 @@ I have completed all the exercises for this module.
 
 I have completed all the exercises for this module.
 
+## Module 12
+
+I have completed all the exercises for this module.
+
+## Module 13
+
+I have completed all the exercises for this module.
+
