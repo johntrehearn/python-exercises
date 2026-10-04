@@ -1,0 +1,9 @@
+** Game Menu **
+
+You are currently in {location}
+
+1. Move to the next room
+2. Display Inventory
+3. Check your Carbon Dioxide Emissions
+4. Save Game
+5. Load Game
