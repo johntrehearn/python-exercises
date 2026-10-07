@@ -9,7 +9,7 @@ def game_menu(player, rooms, player_moveL, player_moveR, player_moveB, display_i
         elif game_menu == "2":
             player_moveR(player, rooms)
         elif game_menu == "3":
-            player_moveR(player, rooms)
+            player_moveB(player, rooms)
         elif game_menu == "4":
             display_inventory(player.inventory)
         elif game_menu == "5":

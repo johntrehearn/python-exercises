@@ -5,6 +5,8 @@ from menu import gameMenu
 
 SAVE_FILE = "save.json"
 
+# Function to collect room item
+
 def collect_item(player, room):
     if room.item is not None:
         collected_item = room.item
@@ -17,6 +19,9 @@ def collect_item(player, room):
             print(f"\nYou dropped the {collected_item.name}.\n")
     else:
         print("Nothing to collect here. Keep looking.")
+
+# Function to check if player has the 3 items needed to open the final door (Potion, Steel Sword and Steel Shield)
+# If not it teleports them back to a random room in the castle
 
 def escape_castle(player, inventory, rooms):
     required_items = {"Potion", "Steel Sword", "Steel Shield"}
@@ -32,6 +37,8 @@ def escape_castle(player, inventory, rooms):
         print(f"You are currently in {player.location.name}.\n")
         collect_item(player, player.location)
 
+# Player move Left - in effect it just moves the player on one
+
 def player_moveL(player, rooms):
     current_room_index = rooms.index(player.location)
     if current_room_index < len(rooms) - 1:
@@ -40,7 +47,8 @@ def player_moveL(player, rooms):
         collect_item(player, player.location)
     else:
         escape_castle(player, player.inventory, rooms)
-        
+
+# Player move Right - in effect it moves them on by a random number
 
 def player_moveR(player, rooms):
     current_room_index = rooms.index(player.location)
@@ -51,6 +59,8 @@ def player_moveR(player, rooms):
     else:
         escape_castle(player, player.inventory, rooms)
 
+# Player move Back - in effect it moves them back one room (but not back necessarily to the previous room)
+
 def player_moveB(player, rooms):
     current_room_index = rooms.index(player.location)
     if current_room_index > 0:
@@ -60,14 +70,20 @@ def player_moveB(player, rooms):
     else:
         escape_castle(player, player.inventory, rooms)
 
+# Function to display the inventory
+
 def display_inventory(inventory):
     print("\nYour current inventory is:")
     for item in inventory:
         print(item.name)
 
+# Calculate the carbon emissions of the items in the inventory.
+
 def carbon_calc(inventory):
     carbon_emissions = len(inventory) * 551
     print(f"\nYour inventory's production emissions are {carbon_emissions}g Carbon Dioxide.")
+
+# Function to save the game. Saves the name, weight and inventory to a json file.
 
 def save_game(player):
     save_data = {
@@ -78,6 +94,8 @@ def save_game(player):
     with open(SAVE_FILE, "w") as save_file:
         json.dump(save_data, save_file)
     print("\nGame saved.")
+
+# Function to load the game. Loads from a json file or shows a error message.
 
 def load_game(player, rooms):
     try:
@@ -97,8 +115,11 @@ def load_game(player, rooms):
             break
     print("\nGame loaded.\n")
 
-def start_game(player_name):
-    map_item = Item("Map", 1)
+
+# Function to create the map it creates rooms and items objects
+# Returns a player object and the tuple containing the rooms / map.
+
+def create_map(player_name):
     crossbow = Item("Crossbow", 5)
     sword = Item("Steel Sword", 3)
     shield = Item("Steel Shield", 4)
@@ -126,6 +147,9 @@ def start_game(player_name):
     start_room = random.choice(rooms)
     return Player(player_name, [paper_shield], start_room), rooms
 
+# Function to start the game.
+# It asks for the players name and age and then calls the gameMenu function (in menu.py
+
 def gameStart():
     print("\n\n** Castle Adventure Game **\n")
     player_name = input("\nPlease enter your name: ")
@@ -133,7 +157,7 @@ def gameStart():
     gameMenu(
         player_name,
         player_age,
-        start_game,
+        create_map,
         player_moveL,
         player_moveR,
         player_moveB,
