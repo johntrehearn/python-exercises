@@ -1,4 +1,5 @@
 import json
+import random
 from game_classes import Item, Player, Room
 from menu import gameMenu
 
@@ -17,14 +18,47 @@ def collect_item(player, room):
     else:
         print("Nothing to collect here. Keep looking.")
 
-def player_move(player, rooms):
+def escape_castle(player, inventory, rooms):
+    required_items = {"Potion", "Steel Sword", "Steel Shield"}
+    inventory_items = {item.name for item in inventory}
+    if required_items <= inventory_items:
+        print("\nYou have escaped the castle\n")
+        carbon_calc(inventory)
+        exit()
+    else:
+        print("\nYou cannot open the door. There are pedestals with pictures of a Potion, Steel Sword, and Steel Shield on them....\n")
+        print("\nA strange blue light appears you seems to be teleporting back into the castle.....")
+        player.location = random.choice(rooms)
+        print(f"You are currently in {player.location.name}.\n")
+        collect_item(player, player.location)
+
+def player_moveL(player, rooms):
     current_room_index = rooms.index(player.location)
     if current_room_index < len(rooms) - 1:
         player.location = rooms[current_room_index + 1]
         print(f"\nYou are currently in {player.location.name}.\n")
         collect_item(player, player.location)
     else:
-        print("\nYou escaped the castle.")
+        escape_castle(player, player.inventory, rooms)
+        
+
+def player_moveR(player, rooms):
+    current_room_index = rooms.index(player.location)
+    if current_room_index < len(rooms) - 1:
+        player.location = rooms[random.randint(current_room_index + 1, len(rooms) - 1)]
+        print(f"\nYou are currently in {player.location.name}.\n")
+        collect_item(player, player.location)
+    else:
+        escape_castle(player, player.inventory, rooms)
+
+def player_moveB(player, rooms):
+    current_room_index = rooms.index(player.location)
+    if current_room_index > 0:
+        player.location = rooms[current_room_index - 1]
+        print(f"\nYou are currently in {player.location.name}.\n")
+        collect_item(player, player.location)
+    else:
+        escape_castle(player, player.inventory, rooms)
 
 def display_inventory(inventory):
     print("\nYour current inventory is:")
@@ -72,21 +106,25 @@ def start_game(player_name):
     pizza = Item("Pizza", 2)
     potion = Item("Potion", 1)
     master_sword = Item("Master Sword", 10)
-    hall = Room("Hall", map_item)
+    castle_map = Item("Castle Map", 1)
+
     rooms = (
-        hall,
-        Room("Room 1", pizza),
-        Room("Room 2", None),
-        Room("Room 3", shield),
-        Room("Room 4", None),
-        Room("Room 5", sword),
-        Room("Room 6", crossbow),
-        Room("Room 7", None),
-        Room("Room 8", potion),
-        Room("Room 9", None),
-        Room("Room 10", master_sword),
+        Room("Entrance Hall", pizza),
+        Room("Stairs", None),
+        Room("Games Room", shield),
+        Room("Study", None),
+        Room("Lounge", sword),
+        Room("Kitchen", crossbow),
+        Room("Master Bedroom", None),
+        Room("Play Room", potion),
+        Room("Conservatory", None),
+        Room("Kitchen", master_sword),
+        Room("Dining Room", None),
+        Room("Library", castle_map)
+
     )
-    return Player(player_name, [paper_shield], hall), rooms
+    start_room = random.choice(rooms)
+    return Player(player_name, [paper_shield], start_room), rooms
 
 def gameStart():
     print("\n\n** Castle Adventure Game **\n")
@@ -96,7 +134,9 @@ def gameStart():
         player_name,
         player_age,
         start_game,
-        player_move,
+        player_moveL,
+        player_moveR,
+        player_moveB,
         display_inventory,
         carbon_calc,
         save_game,

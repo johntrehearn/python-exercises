@@ -2,8 +2,10 @@
 
 You are currently in {location}
 
-1. Move to the next room
-2. Display Inventory
-3. Check your Carbon Dioxide Emissions
-4. Save Game
-5. Load Game
+1. Move Left
+2. Move Right
+3. Display Inventory
+4. Display Inventory
+5. Check your Carbon Dioxide Emissions
+6. Save Game
+7. Load Game
