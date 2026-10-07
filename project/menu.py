@@ -29,7 +29,14 @@ def instructions():
     print(instText)
 
 def options():
-    print("\nLots of great in-game options here.\n")
+    print("\n1. Play at Night\n2. Play in the Day\n")
+    input('Please choose a menu item or enter "back" to exit this menu: ')
+    if input == "1":
+        print("\nIt is night in the castle\n")
+        return
+    elif input == "2":
+        print("\nIt is a sunny day at the castle\n")
+        return
 
 def gameMenu(player_name, player_age, start_game, player_moveL, player_moveR, player_moveB, display_inventory, carbon_calc, save_game, load_game):
     if player_age < 12:

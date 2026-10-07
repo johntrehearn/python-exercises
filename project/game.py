@@ -2,6 +2,7 @@ import json
 import random
 from game_classes import Item, Player, Room
 from menu import gameMenu
+import os
 
 SAVE_FILE = "save.json"
 
@@ -151,7 +152,9 @@ def create_map(player_name):
 # It asks for the players name and age and then calls the gameMenu function (in menu.py
 
 def gameStart():
-    print("\n\n** Castle Adventure Game **\n")
+    # Clears the console (improves readability)
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n** Castle Adventure Game **\n")
     player_name = input("\nPlease enter your name: ")
     player_age = int(input("\nPlease enter your age: "))
     gameMenu(
