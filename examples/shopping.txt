@@ -1,0 +1,7 @@
+milk
+bread
+eggs
+beer
+fanta
+lemonade
+cheese

@@ -4,7 +4,16 @@
 
 This has been updated to include Project 5 tasks.
 
-### Please run game.py
+# Install
+
+## System Requirements
+
+- Python installed
+- Python extension installed (if you want to run within VSCode)
+
+
+### Please run game.py in the project folder
+
 
 This is an adventure and discovery game based in a castle.
 
