@@ -153,6 +153,8 @@ def create_map(player_name):
 
 def gameStart():
     # Clears the console (improves readability)
+    # I have checked the depreciated warning and according to stack overflow it is only deprecated in certain environments
+    # (sending binary to terminals is not recommended for commercial applications -  but I have decided it is safe in a terminal game in my 1st year).
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\n** Castle Adventure Game **\n")
     player_name = input("\nPlease enter your name: ")

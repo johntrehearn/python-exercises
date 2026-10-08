@@ -17,10 +17,22 @@ This has been updated to include Project 5 tasks.
 
 ### Please run game.py in the project folder
 
+## Game Idea
+
+** The Terminal Castle game **
+
+- This is a castle adventure game.
+- The aim is to explore the castle and collect items.
+- The exit door requires certain items to open it.
+
+
+# Objective
 
 This is an adventure and discovery game based in a castle.
 
-The arthurian knight must collect items and escape the castle.
+You are arthurian knight of the realm.
+
+The objective is to explore the castle and collect items.
 
 In order to exit the final door, the knight's inventory must contain the potion key and paper sword
 
@@ -33,3 +45,21 @@ The game is structured as follows:
 - Menu items are contained in `menu.py`
 
 The game can be saved and loaded from the game menu. The save information is stored in `save.json`.
+
+# Operating principles
+
+- There is a game loop
+- Text is displayed on the screen
+- Input is processed
+- Game state is updated (location, items)
+
+# Functionalities
+
+- There are text movement controls
+- Player has a choice to pick up an item
+- Movement controls do not necessarily take you back one room (it is randomised)
+
+# Sustainable development goal
+
+- The player at any point can check the carbon emissions of their inventory
+- When the player escapes they are told their inventories carbon dioxide emissions.

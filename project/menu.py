@@ -40,7 +40,7 @@ def options():
 
 def gameMenu(player_name, player_age, start_game, player_moveL, player_moveR, player_moveB, display_inventory, carbon_calc, save_game, load_game):
     if player_age < 12:
-        print("\nSorry but you are a minor\n\nGoodbye for now\n")
+        print('\nThis game is rated "K12" (Suitable for ages 12 and over)\n\nGoodbye for now\n')
         return
 
     print(f"\nHello {player_name}, your age is {player_age}\n")
