@@ -1,5 +1,13 @@
 
 ** The Terminal Castle game **
 
-- Read the text.
-- Let us know what you want to do.
+- This is a castle adventure game.
+- You are a arthurian knight of the realm
+- The aim is to explore the castle and collect items.
+- The exit door requires certain items to open it.
+- Can you escape?
+
+- This is a text based terminal game.
+- Movement controls are displayed on the terminal screen.
+
+- Have fun.
