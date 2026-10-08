@@ -37,7 +37,7 @@ In order to exit the final door, the knight's inventory must contain the potion 
 The game is structured as follows:
 
 - `game.py` is the main file where the game is run from.
-- Game classes are containe in `game_classes.py`.
+- Game classes are contain in `game_classes.py`.
 - Intro is sourced from `intro.txt`
 - Instructions are pulled from `instructions.txt`
 - Menu items are contained in `menu.py`
@@ -57,7 +57,7 @@ The game can be saved and loaded from the game menu. The save information is sto
 - Player has a choice to pick up an item
 - Movement controls do not necessarily take you back one room (it is randomised)
 - The game can be saved from the game menu
-- Player can checked their carbon dioxide emissions 
+- Player can checked their carbon dioxide emissions
 
 # Sustainable development goal
 
