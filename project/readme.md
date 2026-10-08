@@ -56,6 +56,7 @@ The game can be saved and loaded from the game menu. The save information is sto
 - There are text movement controls
 - Player has a choice to pick up an item
 - Movement controls do not necessarily take you back one room (it is randomised)
+- The game can be saved from the game menu
 
 # Sustainable development goal
 
