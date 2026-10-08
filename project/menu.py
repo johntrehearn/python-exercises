@@ -47,7 +47,7 @@ def gameMenu(player_name, player_age, start_game, player_moveL, player_moveR, pl
     menu_choice = "0"
     while menu_choice != "exit":
         print("** Main Menu **\n\n1. Play the game\n2. Instructions\n3. Options\n")
-        menu_choice = input('Please choose a menu item or enter "exit" to quit: \n')
+        menu_choice = input('Please choose a menu item or enter "exit" to quit: ')
         if menu_choice == "1":
             player, rooms = start_game(player_name)
             game_menu(player, rooms, player_moveL, player_moveR, player_moveB, display_inventory, carbon_calc, save_game, load_game)

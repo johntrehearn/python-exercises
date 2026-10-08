@@ -28,12 +28,12 @@ def escape_castle(player, inventory, rooms):
     required_items = {"Potion", "Steel Sword", "Steel Shield"}
     inventory_items = {item.name for item in inventory}
     if required_items <= inventory_items:
-        print("\nYou have escaped the castle\n")
+        print("\n****You have escaped the castle****\n\n ****Congratulation****")
         carbon_calc(inventory)
         exit()
     else:
         print("\nYou cannot open the door. There are pedestals with pictures of a Potion, Steel Sword, and Steel Shield on them....\n")
-        print("\nA strange blue light appears you seems to be teleporting back into the castle.....")
+        print("\nA strange blue light appears you seems to be teleporting back into the castle.....\n\n")
         player.location = random.choice(rooms)
         print(f"You are currently in {player.location.name}.\n")
         collect_item(player, player.location)
@@ -82,7 +82,7 @@ def display_inventory(inventory):
 
 def carbon_calc(inventory):
     carbon_emissions = len(inventory) * 551
-    print(f"\nYour inventory's production emissions are {carbon_emissions}g Carbon Dioxide.")
+    print(f"\nYour inventory's production emissions are {carbon_emissions}g Carbon Dioxide.\n\n")
 
 # Function to save the game. Saves the name, weight and inventory to a json file.
 
