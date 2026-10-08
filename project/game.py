@@ -11,9 +11,9 @@ SAVE_FILE = "save.json"
 def collect_item(player, room):
     if room.item is not None:
         collected_item = room.item
-        collectChoice = input(
+        keepItem = input(
             f"You found a {collected_item.name}. Would you like to keep it? (yes/no): ")
-        if collectChoice in ("yes", "y"):
+        if keepItem in ("yes", "y"):
             player.inventory.append(collected_item)
             print(f"\nYou have collected the {collected_item.name}. It has been added to your inventory.\n")
         else:

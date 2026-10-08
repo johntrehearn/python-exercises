@@ -30,11 +30,11 @@ def instructions():
 
 def options():
     print("\n1. Play at Night\n2. Play in the Day\n")
-    input('Please choose a menu item or enter "back" to exit this menu: ')
-    if input == "1":
+    option_Choice = input('Please choose a menu item or enter "back" to exit this menu: ')
+    if option_Choice == "1":
         print("\nIt is night in the castle\n")
         return
-    elif input == "2":
+    elif option_Choice == "2":
         print("\nIt is a sunny day at the castle\n")
         return
 
