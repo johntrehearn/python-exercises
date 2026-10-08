@@ -62,4 +62,4 @@ The game can be saved and loaded from the game menu. The save information is sto
 # Sustainable development goal
 
 - The player at any point can check the carbon emissions of their inventory.
-- When the player escapes they are told their inventories carbon dioxide emissions.
+- When the player escapes they are told their inventory's carbon dioxide emissions.
