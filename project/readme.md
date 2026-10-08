@@ -19,8 +19,6 @@ This has been updated to include Project 5 tasks.
 
 ## Game Idea
 
-** The Terminal Castle game **
-
 - This is a castle adventure game.
 - The aim is to explore the castle and collect items.
 - The exit door requires certain items to open it.
@@ -61,5 +59,5 @@ The game can be saved and loaded from the game menu. The save information is sto
 
 # Sustainable development goal
 
-- The player at any point can check the carbon emissions of their inventory
+- The player at any point can check the carbon emissions of their inventory.
 - When the player escapes they are told their inventories carbon dioxide emissions.
